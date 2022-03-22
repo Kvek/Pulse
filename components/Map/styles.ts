@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.section`
+    margin: 20px;
     position: relative;
+    width: 100%;
 
     .leaflet-container {
         height: 100%;
@@ -9,14 +11,19 @@ export const Container = styled.section`
     }
 
     .property {
-        border-radius: 50%;
         background-color: green;
+        border-radius: 50%;
+    }
+
+    .init {
+        background-color: orange;
+        z-index: 1000;
     }
 `;
 
 export const Button = styled.button`
     position: absolute;
-    top: 10px;
     right: 10px;
+    top: 10px;
     z-index: 1001;
 `;

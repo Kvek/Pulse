@@ -1,19 +1,47 @@
 {
-    "parser": "babel-eslint",
     "extends": [
-        "standard",
-        "prettier",
-        "plugin:react/recommended",
-        "prettier/standard"
+        "eslint:recommended",
+        "next/core-web-vitals",
+        "plugin:typescript-sort-keys/recommended",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
-    "plugins": ["react"],
+    "plugins": [
+        "simple-import-sort",
+        "sort-destructure-keys",
+        "sort-keys-fix",
+        "better-styled-components",
+        "@typescript-eslint"
+    ],
     "rules": {
-        "react/react-in-jsx-scope": "off",
-        "react/display-name": "off"
-    },
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
+        "react/prop-types": 0,
+        "no-unused-vars": 0,
+        "@typescript-eslint/no-unused-vars": 2,
+        "better-styled-components/sort-declarations-alphabetically": 2,
+        "react/self-closing-comp": [2],
+        "react/jsx-sort-props": [2],
+        "react/jsx-pascal-case": [2],
+        "arrow-body-style": ["error", "as-needed"],
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error",
+        "simple-import-sort/imports": [
+            "error",
+            {
+                "groups": [
+                    ["^(react|redux)"],
+                    ["^@"],
+                    ["^@containers"],
+                    ["^@components"],
+                    ["^@utils"],
+                    ["^@store"],
+                    ["^"],
+                    ["^\\."]
+                ]
+            }
+        ],
+        "sort-destructure-keys/sort-destructure-keys": [2, { "caseSensitive": true }],
+        "sort-imports": "off",
+        "sort-keys-fix/sort-keys-fix": ["error", "asc", { "caseSensitive": true, "natural": true }]
     }
 }
