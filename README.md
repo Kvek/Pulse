@@ -8,8 +8,8 @@ We needed to create a pulse component that retrieved a list of properties on pag
 
 The task has been partially completed by another developer &ndash; however it needs completing and to be production ready. Below is a list of the outstanding tasks that need to be finished off:
 
-- [ ] Establish a connection to the Socket.io instance using `socket.io-client`.
-- [ ] Listen for `property` events and prepend to the list when new items arrive.
-- [ ] Highlight new property map markers for a brief moment with a different colour.
-- [ ] Hook up the "View Location" button to pan and zoom into the relevant property marker.
-- [ ] Upon receiving a duplicate property, move it to the top of the list.
+- [x] Establish a connection to the Socket.io instance using `socket.io-client`.
+- [x] Listen for `property` events and prepend to the list when new items arrive.
+- [x] Highlight new property map markers for a brief moment with a different colour.
+- [x] Hook up the "View Location" button to pan and zoom into the relevant property marker.
+- [x] Upon receiving a duplicate property, move it to the top of the list.
